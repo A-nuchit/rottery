@@ -18,9 +18,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		font-family: 'Kanit', sans-serif;
 	}
 			.container{
-			margin-top: 5%;
-			margin-bottom: 10%;
-			width: 50%;
+			margin-top: 40px;
+			margin-bottom:40px;
+			width: 40%;
 			box-shadow: 2px 2px 15px #c4c4c4;
 			background: #FFF;
 			border-radius: 20px 20px 0px 20px;
@@ -33,30 +33,30 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			border-style: solid;
 			border-radius: 10px 10px 10px 10px;
 			border-color: #000;
-			font-size: 40px;
+			font-size: 30px;
 		}
 		.topic{
-			font-size: 30px;
+			font-size: 25px;
 			margin-top: 10px;
 		}
 		.one{
-			height: 70px;
+			height: 50px;
 			width: 50%;
 			background-color: #FF615E;
 		}
 		.two{
 			width: 100%;
-			height: 70px;
+			height: 50px;
 			background-color: #E8B34D;
 		}
 		.twoadd{
 			width: 100%;
-			height: 70px;
+			height: 50px;
 			background-color: #FFF567;
 		}
 		.three{
 			width: 100%;
-			height: 70px;
+			height: 50px;
 			background-color: #BCFF5E;
 		}
 		.check{

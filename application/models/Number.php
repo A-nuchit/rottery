@@ -31,29 +31,20 @@ class Number extends CI_Model
 	public function check($num){
 		$data = $this->Number->get_number();
 		$jackpot =  $data[0]->jackpot;
+		$result = array('award' => 0,'award2' => 0,'award3' => 0,'award4' => 0, 'number' => $num );
 		if ($num == $jackpot){
-			$data = array('award' => 1,
-						  'number' => $num );
-			return $data;
+			$result['award'] = 1;
 		}
-		elseif ($num == $data[0]->jackpot2_1 || $num == $data[0]->jackpot2_2 || $num == $data[0]->jackpot2_3) {
-			$data = array('award' => 2,
-						  'number' => $num );
-		 	return $data;
+		if ($num == $data[0]->jackpot2_1 || $num == $data[0]->jackpot2_2 || $num == $data[0]->jackpot2_3) {
+			$result['award2'] = 1;
 		}
-		elseif ($num == $jackpot+1 || $num == $jackpot-1) {
-			$data = array('award' => 3,
-						  'number' => $num );
-		 	return $data;
+		if ($num == $jackpot+1 || $num == $jackpot-1) {
+			$result['award3'] = 1;
 		}
-		elseif (($num%100) == $data[0]->jackpot3_1 || ($num%100) == $data[0]->jackpot3_2 || ($num%100) == $data[0]->jackpot3_3  || ($num%100) == $data[0]->jackpot3_4 ) {
-			$data = array('award' => 4,
-						  'number' => $num );
-		 	return $data;
+		if (($num%100) == $data[0]->jackpot3_1 || ($num%100) == $data[0]->jackpot3_2 || ($num%100) == $data[0]->jackpot3_3  || ($num%100) == $data[0]->jackpot3_4 ) {
+			$result['award4'] = 1;
 		}
-		else{
-			return 0;
-		}
+		return $result;
 	}
 
 }
