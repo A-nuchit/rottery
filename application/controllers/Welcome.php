@@ -16,13 +16,16 @@ class Welcome extends CI_Controller {
 	public function random()
 	{	
 		$this->Number->random_number();
-		redirect('/Welcome', 'refresh');
+		redirect('Welcome', 'refresh');
 	}
 		public function check()
 	{	
 		$datashow ['query']  = $this->Number->get_number();
 		$this->load->view('welcome_message',$datashow);
 		$data = $this->input->get("number");
+		if(empty($data)){
+			redirect('Welcome', 'refresh');
+		}
 		$result =  $this->Number->check($data);
 		if($result['award'] == 0 && $result['award2'] == 0 && $result['award3'] == 0 && $result['award4'] == 0){
 			$result['number'] = $result['number']." ไม่ถูกรางวัลใดเลย";

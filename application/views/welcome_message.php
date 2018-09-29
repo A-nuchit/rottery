@@ -25,7 +25,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			background: #FFF;
 			border-radius: 20px 20px 0px 20px;
 			border-style: solid;
-			border-color: #fff;
+			border-color: #FFF;
 			border-width: 20px;
 		}
 		.box{
@@ -82,7 +82,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </head>
 <body>
 	<center>
-		<button onclick="location.href='<?php echo base_url() ?>index.php/Welcome/random'" type="button" class="btn btn-primary" >ดำเนินการสุ่มรางวัล</button>
+		<button onclick="location.href='http://www.moominnn.com/lottery/index.php/Welcome/random'" type="button" class="btn btn-primary" >ดำเนินการสุ่มรางวัล</button>
 	</center>
 	<div class="container">
 		<?php foreach ($query as $r) {
@@ -172,7 +172,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				</div>
 			</div>
 			<div class="check">
-				<form action="<?php echo base_url() ?>index.php/Welcome/check">
+				<form action="http://www.moominnn.com/lottery/index.php/Welcome/check">
     			<div class="form-group"> 
     				<h1>ตรวจรางวัล</h1>	
       				<input type="text" class="form-control form-control-lg" placeholder="กรอกตัวเลข" name="number">

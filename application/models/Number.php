@@ -16,7 +16,7 @@ class Number extends CI_Model
         'jackpot3_4'  => rand(0,99),
         'status' => 1 );
 		$this->db->where('id', 1);
-		$this->db->update('Number', $data);
+		$this->db->update('number', $data);
 	}
 	public function random_numbertwo()
 	{
@@ -25,7 +25,7 @@ class Number extends CI_Model
 	}
 	public function get_number()
 	{
-		$data = $this->db->get('Number');
+		$data = $this->db->get('number');
         return $data->result();
 	}
 	public function check($num){
